@@ -1,0 +1,83 @@
+@import url("../Styles/header.css");
+@import url("../Styles/banner.css");
+@import url("../Styles/carossel.css");
+@import url("../Styles/topicos.css");
+@import url("../Styles/contato.css");
+@import url("../Styles/rodape.css");
+:root{
+    --cor-fundo:#EBECEE;
+    --branco:#ffffff;
+    --laranja:#EB9B00;
+    --gradiente: linear-gradient(98deg, #002F52 35.49%, #326589 165.37%);
+    --fonte-principal: 'Roboto', sans-serif;
+    --fonte-secundaria: 'Josefin Sans';
+    --azul:#002F52;
+    --preto:#000000;
+    --cinza:#474646;
+    --cinza-claro:#858585;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cabecalho{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--branco);
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+}
+
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.lista-menu__titulo,
+.lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link{
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+}
+
+.lista-menu__link{
+    text-decoration: none;
+    
+}
+
+.botao__menu:checked  ~ .lista-menu{
+    display: block;
+}
+
+.botao__menu{
+    display: none;
+}
